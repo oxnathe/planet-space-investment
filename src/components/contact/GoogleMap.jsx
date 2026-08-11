@@ -80,7 +80,7 @@ export default function GoogleMap() {
                 <br />
                 Opp. Ojaja Mall,
                 <br />
-                Adesanya,
+                Abraham Adesanya,
                 <br />
                 Lekki–Epe Expressway,
                 Lagos, Nigeria.

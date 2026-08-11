@@ -1,44 +1,52 @@
 import { motion } from "framer-motion";
 import {
-  Building2,
-  KeyRound,
-  BriefcaseBusiness,
   Landmark,
   Hammer,
+  BriefcaseBusiness,
+  Sofa,
 } from "lucide-react";
 
 import ServiceCard from "./ServiceCard";
 
 const services = [
-  {
-    title: "Property Sales",
-    icon: Building2,
-    description:
-      "Find premium residential and commercial properties carefully selected to deliver lasting value, security, and excellent investment opportunities.",
-  },
-  {
-    title: "Property Rentals",
-    icon: KeyRound,
-    description:
-      "Explore quality rental homes, apartments, office spaces, and commercial properties that suit your lifestyle and business needs.",
-  },
-  {
-    title: "Property Management",
-    icon: BriefcaseBusiness,
-    description:
-      "We provide professional property management services that maximize returns while maintaining your investment to the highest standards.",
-  },
+  // ==========================================
+  // 1. REAL ESTATE DEVELOPMENT
+  // ==========================================
   {
     title: "Real Estate Development",
     icon: Landmark,
     description:
       "From land acquisition to project completion, we develop modern residential and commercial communities built for long-term value.",
   },
+
+  // ==========================================
+  // 2. CONSTRUCTION
+  // ==========================================
   {
     title: "Construction",
     icon: Hammer,
     description:
       "Our experienced construction team delivers quality workmanship, innovative designs, and durable structures for every project.",
+  },
+
+  // ==========================================
+  // 3. PROPERTY MANAGEMENT
+  // ==========================================
+  {
+    title: "Property Management",
+    icon: BriefcaseBusiness,
+    description:
+      "We provide professional property management services that maximize returns while maintaining your investment to the highest standards.",
+  },
+
+  // ==========================================
+  // 4. INTERIOR DESIGN
+  // ==========================================
+  {
+    title: "Interior Design",
+    icon: Sofa,
+    description:
+      "Urban Design Style. A team of creatives bringing collective contemporary and luxury finishing ideas to life.",
   },
 ];
 
@@ -47,12 +55,15 @@ export default function ServicesGrid() {
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Section Heading */}
+        {/* ==========================================
+            SECTION HEADING
+        ========================================== */}
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: .7 }}
+          transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
           <p className="uppercase tracking-[4px] text-[#C89B3C] font-semibold mb-3">
@@ -70,7 +81,10 @@ export default function ServicesGrid() {
           </p>
         </motion.div>
 
-        {/* Services Grid */}
+        {/* ==========================================
+            SERVICES GRID
+        ========================================== */}
+
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
           {services.map((service, index) => (
@@ -80,9 +94,10 @@ export default function ServicesGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{
-                duration: .6,
+                duration: 0.6,
                 delay: index * 0.15,
               }}
+              className={index === 3 ? "lg:col-start-2" : ""}
             >
               <ServiceCard {...service} />
             </motion.div>

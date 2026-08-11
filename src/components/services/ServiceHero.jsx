@@ -1,5 +1,7 @@
 import PageHero from "../common/PageHero";
-import heroImage from "../../assets/estate-hero.png";
+
+const heroImage =
+  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop";
 
 export default function ServiceHero() {
   return (

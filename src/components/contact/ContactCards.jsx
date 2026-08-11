@@ -25,7 +25,7 @@ const cards = [
     icon: MapPin,
     title: "Visit Our Office",
     value: "Muniru Plaza",
-    sub: "Opp. Ojaja Mall, Adesanya, Lekki–Epe Expressway",
+    sub: "Opp. Ojaja Mall, Abraham Adesanya, Lekki–Epe Expressway",
     href: "https://maps.google.com/?q=Muniru+Plaza+Opp+Ojaja+Mall+Adesanya+Lekki+Epe+Expressway",
   },
   {
