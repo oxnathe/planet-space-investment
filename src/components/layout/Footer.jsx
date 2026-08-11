@@ -116,7 +116,7 @@ export default function Footer() {
 
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="https://wa.me/2349014641414"
+                href="https://wa.me/23408121072066"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 transition hover:bg-[#25D366]"

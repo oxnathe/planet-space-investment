@@ -25,20 +25,20 @@ export default function FeaturedEstate() {
             </p>
 
             <h2 className="text-5xl font-bold text-[#0B1F35] leading-tight mb-6">
-              Planet Gardens Estate
+              The Signature Duplex
             </h2>
 
             <div className="flex items-center text-gray-500 mb-8">
               <MapPin size={20} />
               <span className="ml-2">
-                Uyo, Akwa Ibom State
+                Chaplin Court, Lekki
               </span>
             </div>
 
             <p className="text-gray-600 leading-8 mb-6">
-              Planet Gardens Estate is thoughtfully planned to offer residents
-              a peaceful environment, excellent infrastructure, reliable
-              security, and exceptional investment potential.
+             The Signature duplex is a beautifully designed 5-bedroom duplex currently under construction, thoughtfully planned for modern family living.
+Featuring spacious rooms, elegant architecture, and quality finishes, this property is taking shape to offer 
+comfort, privacy, and style.
             </p>
 
             <p className="text-gray-600 leading-8 mb-10">

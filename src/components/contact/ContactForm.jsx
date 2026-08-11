@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Send, MapPin, Phone, Mail } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
+import contactOffice from "../../assets/contact-office.jpg";
 
 export default function ContactForm() {
   const [searchParams] = useSearchParams();
@@ -116,11 +117,11 @@ export default function ContactForm() {
             className="relative min-h-[650px]"
           >
 
-            <img
-              src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1600&auto=format&fit=crop"
-              alt="Planet Space Office"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+           <img
+  src={contactOffice}
+  alt="Planet Space Office"
+  className="absolute inset-0 w-full h-full object-cover"
+/>
 
             <div className="absolute inset-0 bg-slate-950/70" />
 
@@ -146,7 +147,7 @@ export default function ContactForm() {
                       <br />
                       Opp. Ojaja Mall,
                       <br />
-                      Adesanya,
+                      Abraham Adesanya,
                       <br />
                       Lekki–Epe Expressway.
                     </p>
