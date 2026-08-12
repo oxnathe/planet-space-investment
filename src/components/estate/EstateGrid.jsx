@@ -1,7 +1,7 @@
 import EstateCard from "./EstateCard";
 
-import estate1 from "../../assets/estate1.jpeg";
-import estate2 from "../../assets/estate2.jpeg";
+import estate1 from "../../assets/estate1.webp";
+import estate2 from "../../assets/estate2.webp";
 import estate3 from "../../assets/estate3.jpg";
 import estate4 from "../../assets/estate4.jpg";
 
@@ -42,7 +42,10 @@ const estates = [
 
 export default function EstateGrid() {
   return (
-    <section className="py-24 bg-gray-50">
+    <section
+      id="communities"
+      className="py-24 bg-gray-50"
+    >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Section Heading */}
@@ -59,7 +62,10 @@ export default function EstateGrid() {
         {/* Estate Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {estates.map((estate) => (
-            <EstateCard key={estate.title} {...estate} />
+            <EstateCard
+              key={estate.title}
+              {...estate}
+            />
           ))}
         </div>
 

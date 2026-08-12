@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 
 export default function ServiceCard({
   title,
@@ -31,19 +30,9 @@ export default function ServiceCard({
         </h3>
 
         {/* Description */}
-        <p className="text-gray-600 leading-8 mb-8">
+        <p className="text-gray-600 leading-8">
           {description}
         </p>
-
-        {/* Learn More */}
-        <div className="flex items-center gap-2 text-[#C89B3C] font-semibold">
-          Learn More
-
-          <ArrowUpRight
-            size={18}
-            className="group-hover:translate-x-2 group-hover:-translate-y-1 transition-all"
-          />
-        </div>
 
       </div>
     </motion.div>

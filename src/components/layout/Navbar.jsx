@@ -17,6 +17,35 @@ export default function Navbar() {
 
   const location = useLocation();
 
+  /* ===============================
+     SCROLL TO TOP
+  =============================== */
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  /* ===============================
+     HANDLE NAVIGATION
+  =============================== */
+
+  const handleNavigation = (path) => {
+    setOpen(false);
+
+    // Same page
+    if (location.pathname === path) {
+      scrollToTop();
+    }
+  };
+
+  /* ===============================
+     NAVBAR SCROLL
+  =============================== */
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
@@ -24,17 +53,30 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
+  /* ===============================
+     CLOSE MOBILE MENU
+  =============================== */
 
   useEffect(() => {
     setOpen(false);
   }, [location.pathname]);
 
-  const transparent = location.pathname === "/" && !scrolled;
+  /* ===============================
+     TRANSPARENT HOME NAVBAR
+  =============================== */
+
+  const transparent =
+    location.pathname === "/" && !scrolled;
 
   return (
     <>
+      {/* ================= NAVBAR ================= */}
+
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -47,29 +89,43 @@ export default function Navbar() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
 
-          {/* Logo */}
+          {/* ================= LOGO ================= */}
+
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={() => {
+                if (location.pathname === "/") {
+                  scrollToTop();
+                }
+              }}
+              aria-label="Planet Space Investment - Home"
+            >
               <img
                 src="/images/logo.png"
-                alt="Planet Space"
+                alt="Planet Space Investment"
                 className="h-11 w-auto"
               />
             </Link>
           </motion.div>
 
-          {/* Desktop Navigation */}
+          {/* ================= DESKTOP NAVIGATION ================= */}
+
           <nav className="hidden lg:flex items-center gap-10">
             {links.map((link) => {
-              const active = location.pathname === link.path;
+              const active =
+                location.pathname === link.path;
 
               return (
                 <Link
                   key={link.name}
                   to={link.path}
+                  onClick={() =>
+                    handleNavigation(link.path)
+                  }
                   className="group relative text-sm uppercase tracking-[3px] text-white transition-colors duration-300 hover:text-brand-gold"
                 >
                   {link.name}
@@ -86,19 +142,28 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Mobile Button */}
+          {/* ================= MOBILE BUTTON ================= */}
+
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden text-white"
-            aria-label="Toggle menu"
+            className="lg:hidden text-brand-gold"
+            aria-label={
+              open ? "Close menu" : "Open menu"
+            }
+            aria-expanded={open}
           >
-            {open ? <X size={30} /> : <Menu size={30} />}
+            {open ? (
+              <X size={30} />
+            ) : (
+              <Menu size={30} />
+            )}
           </button>
 
         </div>
       </motion.header>
 
-      {/* Mobile Menu */}
+      {/* ================= MOBILE MENU ================= */}
+
       <AnimatePresence>
         {open && (
           <motion.div
@@ -108,25 +173,44 @@ export default function Navbar() {
             transition={{ duration: 0.45 }}
             className="fixed inset-0 z-[100] bg-brand-dark"
           >
+
+            {/* Close Button */}
+
             <div className="flex justify-end p-8">
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Close menu"
               >
-                <X className="text-white" size={34} />
+                <X
+                  className="text-brand-gold"
+                  size={34}
+                />
               </button>
             </div>
+
+            {/* Mobile Navigation */}
 
             <nav className="mt-20 flex flex-col items-center gap-10">
               {links.map((link, i) => (
                 <motion.div
                   key={link.name}
-                  initial={{ opacity: 0, x: 40 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.08 }}
+                  initial={{
+                    opacity: 0,
+                    x: 40,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  transition={{
+                    delay: i * 0.08,
+                  }}
                 >
                   <Link
                     to={link.path}
+                    onClick={() =>
+                      handleNavigation(link.path)
+                    }
                     className={`text-3xl uppercase tracking-[4px] transition-colors duration-300 ${
                       location.pathname === link.path
                         ? "text-brand-gold"
@@ -138,6 +222,7 @@ export default function Navbar() {
                 </motion.div>
               ))}
             </nav>
+
           </motion.div>
         )}
       </AnimatePresence>

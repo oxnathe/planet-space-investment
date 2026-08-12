@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import featuredImg from "../../assets/featured-estate.jpg";
 
 export default function FeaturedEstate() {
@@ -36,9 +36,9 @@ export default function FeaturedEstate() {
             </div>
 
             <p className="text-gray-600 leading-8 mb-6">
-             The Signature duplex is a beautifully designed 5-bedroom duplex currently under construction, thoughtfully planned for modern family living.
-Featuring spacious rooms, elegant architecture, and quality finishes, this property is taking shape to offer 
-comfort, privacy, and style.
+              The Signature duplex is a beautifully designed 5-bedroom duplex currently under construction, thoughtfully planned for modern family living.
+              Featuring spacious rooms, elegant architecture, and quality finishes, this property is taking shape to offer 
+              comfort, privacy, and style.
             </p>
 
             <p className="text-gray-600 leading-8 mb-10">
@@ -46,11 +46,6 @@ comfort, privacy, and style.
               or investing for the future, Planet Gardens provides lasting
               value in one of Nigeria's fastest-growing locations.
             </p>
-
-            <button className="inline-flex items-center gap-3 bg-[#C8A35F] text-white px-8 py-4 rounded-full hover:bg-[#b58f4f] transition">
-              Learn More
-              <ArrowRight size={18} />
-            </button>
 
           </div>
 

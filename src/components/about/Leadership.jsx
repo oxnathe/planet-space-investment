@@ -1,84 +1,52 @@
 import { motion } from "framer-motion";
 import { Linkedin, Instagram } from "lucide-react";
 
-import cooImage from "../../assets/coo.png";
-import wilsonImage from "../../assets/wilson.png";
-
-/* =====================================================
-   LEADERS
-===================================================== */
+import cooImage from "../../assets/coo.webp";
+import legalImage from "../../assets/legal.jpeg";
 
 const leaders = [
   {
     name: "Emmanuel Gwachie Onwuka",
-    position: "Founder/Chief Executive Officer",
+    position: "Founder / Chief Executive Officer",
     image:
       "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1200&auto=format&fit=crop",
     imagePosition: "center 15%",
     bio: "Emmanuel leads Planet Space Investment LTD with a passion for building lasting legacies in real estate and delivering long-term value through innovative real estate opportunities.",
+    linkedin: "#",
   },
-
   {
     name: "Precious Onyinyechi Ndukwe-Onwuka",
-    position: "Co-Founder/MD/COO",
+    position: "Co-Founder / MD / COO",
     image: cooImage,
     imagePosition: "center 15%",
     bio: "Precious pilots Planet Space Investment LTD's vision in customer experience and sales, overseeing project execution and ensuring every development reflects our commitment to quality and excellence.",
+    linkedin: "#",
   },
 ];
-
-/* =====================================================
-   TEAM MEMBERS
-===================================================== */
 
 const teamMembers = [
   {
-    name: "Wilson Utieyin",
-    position: "Technology & Software Engineer",
-    image: wilsonImage,
-    imagePosition: "center 0%",
-    instagram: "https://www.instagram.com/utiwilx1/",
-  },
-
-  {
-    name: "Raphael Raphal",
-    position: "Visual & Brand Designer",
-    image: null,
+    name: "𝗔𝗱𝗲𝗯𝗼𝘆𝗲 𝗢𝗹𝗮𝗷𝗶𝗱𝗲",
+    position: "Legal & Compliance",
+    image: legalImage,
     imagePosition: "center 15%",
     instagram: "#",
   },
-
   {
-    name: "Blessing Blessing",
-    position: "Content & Communications Specialist",
-    image: null,
-    imagePosition: "center 15%",
-    instagram: "#",
-  },
-
-  {
-    name: "Victor Vicctor",
-    position: "Operations & Equipment Specialist",
+    name: "Company Secretary",
+    position: "Company Secretary",
     image: null,
     imagePosition: "center 15%",
     instagram: "#",
   },
 ];
-
-/* =====================================================
-   LEADERSHIP COMPONENT
-===================================================== */
 
 export default function Leadership() {
   return (
     <section className="py-24 lg:py-32 bg-white">
-
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-        {/* =================================================
-            SECTION HEADING
-        ================================================= */}
-
+        {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +54,6 @@ export default function Leadership() {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto"
         >
-
           <p className="uppercase tracking-[0.3em] text-amber-500 text-sm font-semibold mb-4">
             Leadership & Team
           </p>
@@ -96,22 +63,15 @@ export default function Leadership() {
           </h2>
 
           <p className="mt-6 text-lg text-slate-600 leading-8">
-            Our team brings together leadership, creativity, technology,
-            operational expertise, and a shared commitment to building
-            exceptional communities.
+            Our leadership team brings together experience, strategic
+            direction, operational excellence, and professional expertise
+            to drive the vision of Planet Space Investment LTD.
           </p>
-
         </motion.div>
 
-
-        {/* =================================================
-            LEADERS
-        ================================================= */}
-
+        {/* Leadership */}
         <div className="grid lg:grid-cols-2 gap-8 mt-16 max-w-5xl mx-auto">
-
           {leaders.map((leader, index) => (
-
             <motion.div
               key={leader.name}
               initial={{ opacity: 0, y: 50 }}
@@ -134,11 +94,7 @@ export default function Leadership() {
                 duration-500
               "
             >
-
-              {/* =================================================
-                  LEADER IMAGE
-              ================================================= */}
-
+              {/* Leader Image */}
               <div
                 className="
                   relative
@@ -148,7 +104,6 @@ export default function Leadership() {
                   bg-slate-100
                 "
               >
-
                 <img
                   src={leader.image}
                   alt={leader.name}
@@ -166,7 +121,6 @@ export default function Leadership() {
                 />
 
                 {/* Bottom Gradient */}
-
                 <div
                   className="
                     absolute
@@ -179,12 +133,16 @@ export default function Leadership() {
                   "
                 />
 
-                {/* Leader Social Buttons */}
-
+                {/* LinkedIn */}
                 <div className="absolute bottom-5 left-5 flex gap-3">
-
                   <a
-                    href="#"
+                    href={leader.linkedin}
+                    target={leader.linkedin !== "#" ? "_blank" : undefined}
+                    rel={
+                      leader.linkedin !== "#"
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                     aria-label={`LinkedIn - ${leader.name}`}
                     className="
                       w-10
@@ -201,18 +159,11 @@ export default function Leadership() {
                   >
                     <Linkedin size={17} />
                   </a>
-
                 </div>
-
               </div>
 
-
-              {/* =================================================
-                  LEADER INFORMATION
-              ================================================= */}
-
+              {/* Leader Information */}
               <div className="p-6 sm:p-7">
-
                 <h3
                   className="
                     text-2xl
@@ -233,6 +184,7 @@ export default function Leadership() {
                 </p>
 
                 <button
+                  type="button"
                   className="
                     mt-6
                     font-semibold
@@ -243,20 +195,12 @@ export default function Leadership() {
                 >
                   View Profile
                 </button>
-
               </div>
-
             </motion.div>
-
           ))}
-
         </div>
 
-
-        {/* =================================================
-            TEAM HEADING
-        ================================================= */}
-
+        {/* Professional Team Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -264,31 +208,24 @@ export default function Leadership() {
           transition={{ duration: 0.7 }}
           className="text-center mt-24 mb-12"
         >
-
           <p className="uppercase tracking-[0.3em] text-amber-500 text-sm font-semibold mb-3">
-            Our Team
+            Professional Team
           </p>
 
           <h3 className="text-3xl lg:text-4xl font-bold text-slate-900">
-            The Team Making It Happen
+            Supporting Our Vision
           </h3>
 
           <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-            Behind every Planet Space project is a team of dedicated
-            professionals working together to turn ideas into reality.
+            Our professional team provides the legal, administrative, and
+            corporate support required to ensure Planet Space Investment
+            LTD operates with integrity and excellence.
           </p>
-
         </motion.div>
 
-
-        {/* =================================================
-            TEAM MEMBERS
-        ================================================= */}
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
+        {/* Legal & Secretary */}
+        <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {teamMembers.map((member, index) => (
-
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 40 }}
@@ -312,13 +249,7 @@ export default function Leadership() {
                 duration-300
               "
             >
-
-              {/* =================================================
-                  TEAM MEMBER IMAGE
-
-                  Large image area
-              ================================================= */}
-
+              {/* Team Image */}
               <div
                 className="
                   relative
@@ -328,9 +259,7 @@ export default function Leadership() {
                   bg-slate-100
                 "
               >
-
                 {member.image ? (
-
                   <img
                     src={member.image}
                     alt={member.name}
@@ -346,9 +275,7 @@ export default function Leadership() {
                       group-hover:scale-[1.02]
                     "
                   />
-
                 ) : (
-
                   <div
                     className="
                       w-full
@@ -361,7 +288,6 @@ export default function Leadership() {
                       to-slate-200
                     "
                   >
-
                     <div
                       className="
                         w-20
@@ -373,7 +299,6 @@ export default function Leadership() {
                         justify-center
                       "
                     >
-
                       <span
                         className="
                           text-2xl
@@ -383,29 +308,16 @@ export default function Leadership() {
                       >
                         {member.name.charAt(0)}
                       </span>
-
                     </div>
-
                   </div>
-
                 )}
-
               </div>
 
-
-              {/* =================================================
-                  SMALL TEAM INFORMATION CARD
-
-                  Reduced padding and spacing so the image
-                  remains the dominant part of the card.
-              ================================================= */}
-
-              <div className="px-4 py-4 sm:px-5 sm:py-4">
-
+              {/* Team Information */}
+              <div className="px-5 py-5">
                 <h4
                   className="
-                    text-lg
-                    sm:text-xl
+                    text-xl
                     font-bold
                     text-slate-900
                     leading-tight
@@ -418,25 +330,20 @@ export default function Leadership() {
                   className="
                     text-amber-500
                     font-semibold
-                    text-xs
-                    sm:text-sm
-                    mt-1.5
-                    leading-5
+                    text-sm
+                    mt-2
                   "
                 >
                   {member.position}
                 </p>
 
-
-                {/* =================================================
-                    INSTAGRAM ONLY
-                ================================================= */}
-
-                <div className="mt-3">
-
+                {/* Instagram */}
+                <div className="mt-4">
                   <a
                     href={member.instagram}
-                    target={member.instagram !== "#" ? "_blank" : undefined}
+                    target={
+                      member.instagram !== "#" ? "_blank" : undefined
+                    }
                     rel={
                       member.instagram !== "#"
                         ? "noopener noreferrer"
@@ -459,21 +366,14 @@ export default function Leadership() {
                     "
                   >
                     <Instagram size={17} />
-
                   </a>
-
                 </div>
-
               </div>
-
             </motion.div>
-
           ))}
-
         </div>
 
       </div>
-
     </section>
   );
 }

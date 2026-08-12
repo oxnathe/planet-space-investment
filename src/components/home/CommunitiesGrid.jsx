@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import CommunityCard from "./CommunityCard";
 
 const communities = [
@@ -123,19 +124,24 @@ export default function CommunitiesGrid() {
           </div>
 
           {/* View All */}
-          <motion.a
-            href="/communities"
+          <motion.div
             whileHover={{
               x: 5,
             }}
-            className="group inline-flex items-center gap-2 self-start font-medium text-brand-dark transition-colors duration-300 hover:text-brand-gold lg:self-auto"
+            className="self-start lg:self-auto"
           >
-            View All Communities
+            <Link
+              to="/estate"
+              className="group inline-flex items-center gap-2 font-medium text-brand-dark transition-colors duration-300 hover:text-brand-gold"
+              aria-label="View all Planet Space communities"
+            >
+              View All Communities
 
-            <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </motion.a>
+              <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </Link>
+          </motion.div>
 
         </motion.div>
 

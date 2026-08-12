@@ -56,13 +56,6 @@ export default function EstateHero() {
               Make an Inquiry
               <ArrowRight size={18} />
             </Link>
-
-            <Link
-              to="/"
-              className="rounded-full border border-white/30 px-7 py-4 font-semibold text-white transition hover:bg-white hover:text-slate-900"
-            >
-              Back Home
-            </Link>
           </div>
         </motion.div>
       </div>

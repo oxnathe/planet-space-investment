@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 export default function ContactHero() {
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-slate-950">
+
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -65,32 +66,40 @@ export default function ContactHero() {
 
           {/* Quick Contact */}
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-white/20 pt-8">
+
+            {/* Phone */}
             <div>
               <p className="text-sm uppercase tracking-widest text-amber-400 mb-2">
                 Phone
               </p>
+
               <p className="text-white font-medium">
                 0812 107 2066
               </p>
             </div>
 
-            <div>
+            {/* Email */}
+            <div className="min-w-0">
               <p className="text-sm uppercase tracking-widest text-amber-400 mb-2">
                 Email
               </p>
-              <p className="text-white font-medium break-all">
+
+              <p className="text-white font-medium whitespace-nowrap text-sm sm:text-base">
                 info@planetspaceinvestment.ng
               </p>
             </div>
 
+            {/* Office */}
             <div>
               <p className="text-sm uppercase tracking-widest text-amber-400 mb-2">
                 Office
               </p>
+
               <p className="text-white font-medium">
                 Lekki–Epe Expressway
               </p>
             </div>
+
           </div>
         </motion.div>
       </div>

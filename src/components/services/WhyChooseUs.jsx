@@ -6,7 +6,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 
-import whyChooseImage from "../../assets/why-choose-us.jpg";
+import whyChooseImage from "../../assets/why-choose-us.webp";
 
 const features = [
   {
