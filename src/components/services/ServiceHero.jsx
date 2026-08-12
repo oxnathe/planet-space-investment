@@ -10,7 +10,7 @@ export default function ServiceHero() {
       title={
         <>
           Building Wealth Through
-          <span className="block text-[#C89B3C]">
+          <span className="block text-brand-gold">
             Smart Real Estate Solutions
           </span>
         </>

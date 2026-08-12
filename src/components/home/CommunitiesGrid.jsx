@@ -4,7 +4,7 @@ import CommunityCard from "./CommunityCard";
 
 const communities = [
   {
-    name: "The Luxe Apartment",
+    name: "The Luxe Apartment Lekki",
     location: "Lekki, Lagos",
     tag: "New Launch",
     image: "/images/community-1.jpg",
