@@ -12,7 +12,7 @@ export default function GoogleMap() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: .7 }}
+          transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <p className="uppercase tracking-[0.3em] text-amber-500 text-sm font-semibold mb-4">
@@ -20,7 +20,7 @@ export default function GoogleMap() {
           </p>
 
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
-            We'd Love To Welcome You
+            We&apos;d Love To Welcome You
           </h2>
 
           <p className="mt-6 text-lg text-slate-600 leading-8">
@@ -34,10 +34,10 @@ export default function GoogleMap() {
         {/* Map */}
 
         <motion.div
-          initial={{ opacity: 0, scale: .97 }}
+          initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: .8 }}
+          transition={{ duration: 0.8 }}
           className="overflow-hidden rounded-3xl shadow-2xl border border-slate-200"
         >
 
@@ -57,7 +57,7 @@ export default function GoogleMap() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: .8 }}
+          transition={{ duration: 0.8 }}
           className="mt-12 bg-slate-900 rounded-3xl p-10 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-10"
         >
 

@@ -75,7 +75,7 @@ export default function Footer() {
             </Link>
 
             <p className="max-w-sm leading-8 text-white/70">
-              Planet Space develops premium estates and investment
+              Planet Space Investment develops premium estates and investment
               opportunities designed to create lasting value for homeowners
               and investors across Nigeria.
             </p>
@@ -155,7 +155,7 @@ export default function Footer() {
             </div>
 
             <p className="mt-8 leading-7 text-white/60">
-              Stay connected with Planet Space for the latest estate
+              Stay connected with Planet Space Investment for the latest estate
               launches, investment opportunities and project updates.
             </p>
           </motion.div>
@@ -168,7 +168,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center gap-4 pt-10 text-sm text-white/60 md:flex-row md:justify-between">
 
           <p>
-            © {new Date().getFullYear()} Planet Space. All rights reserved.
+            © {new Date().getFullYear()} Planet Space Investment. All rights reserved.
           </p>
 
           <Link

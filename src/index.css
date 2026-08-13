@@ -1,268 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* =========================
-   GLOBAL
-========================= */
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background: #ffffff;
-  color: #111827;
-  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  background-color: #ffffff;
+  color: #0D1B2A;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.font-display {
-  font-family: "Playfair Display", serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
-::selection {
-  background: #c9a24d;
-  color: #ffffff;
-}
-
-/* =========================
-   SCROLLBAR
-========================= */
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #041634;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c9a24d;
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #d8b15c;
-}
-
-/* =========================
-   CARD HOVER
-========================= */
-
-.card-lift {
-  transition:
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.card-lift:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.25);
-}
-
-/* =========================
-   LINK UNDERLINE
-========================= */
-
-.link-underline {
-  position: relative;
-}
-
-.link-underline::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0;
-  height: 2px;
-  background: #c9a24d;
-  transition: width 0.35s ease;
-}
-
-.link-underline:hover::after {
-  width: 100%;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn-gold {
-  background: #c9a24d;
-  color: #041634;
-  transition: all 0.35s ease;
-}
-
-.btn-gold:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(201, 162, 77, 0.35);
-}
-
-.btn-glass {
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: all 0.35s ease;
-}
-
-.btn-glass:hover {
-  background: rgba(255, 255, 255, 0.18);
-}
-
-/* =========================
-   GLASS EFFECT
-========================= */
-
-.glass {
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-/* =========================
-   IMAGE ZOOM
-========================= */
-
-.image-zoom {
-  overflow: hidden;
-}
-
-.image-zoom img {
-  transition: transform 1s ease;
-}
-
-.image-zoom:hover img {
-  transform: scale(1.08);
-}
-
-/* =========================
-   HERO IMAGE (Optional)
-========================= */
-
-.hero-image {
-  animation: heroImageZoom 15s ease-in-out infinite alternate;
-}
-
-@keyframes heroImageZoom {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.06);
-  }
-}
-
-/* =========================
-   FADE UP
-========================= */
-
-.fade-up {
-  animation: fadeUp 0.8s ease forwards;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================
-   FLOATING
-========================= */
-
-.float {
-  animation: floating 5s ease-in-out infinite;
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* =========================
-   GOLD GLOW
-========================= */
-
-.gold-glow:hover {
-  box-shadow: 0 0 35px rgba(201, 162, 77, 0.45);
-}
-
-/* =========================
-   GOLD TEXT
-========================= */
-
-.text-gold-gradient {
-  background: linear-gradient(
-    90deg,
-    #f7e7b6,
-    #d4af37,
-    #f7e7b6
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* =========================
-   SECTION SPACING
-========================= */
-
-.section-padding {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-}
-
-@media (max-width: 768px) {
-  .section-padding {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-}
-
-/* =========================
-   SMOOTH TRANSITIONS
-========================= */
-
-a,
-button {
-  transition: all 0.3s ease;
-}
-
-/* =========================
-   ACCESSIBILITY
-========================= */
-
-button:focus-visible,
-a:focus-visible {
-  outline: 2px solid #c9a24d;
-  outline-offset: 3px;
+button,
+input,
+textarea,
+select {
+  font-family: 'Manrope', sans-serif;
 }

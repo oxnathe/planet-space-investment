@@ -22,7 +22,7 @@ export default function ServiceCTA() {
           <div className="relative z-10 max-w-4xl mx-auto">
 
             <p className="uppercase tracking-[5px] text-[#C89B3C] font-semibold mb-4">
-              LET'S WORK TOGETHER
+              LET&apos;S WORK TOGETHER
             </p>
 
             <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight">
@@ -33,7 +33,7 @@ export default function ServiceCTA() {
             </h2>
 
             <p className="mt-8 text-lg text-gray-300 leading-8 max-w-3xl mx-auto">
-              Whether you're buying your first property, expanding your
+              Whether you&apos;re buying your first property, expanding your
               investment portfolio, planning a development project, or
               looking for trusted property management, Planet Space
               Investment is ready to help you every step of the way.

@@ -5,14 +5,29 @@ const cards = [
   {
     icon: Target,
     title: "Our Mission",
-    description:
-      "To deliver exceptional real estate developments that provide lasting value, inspire confidence, and create thriving communities where people can live, work, and invest with peace of mind.",
+    description: (
+      <>
+        Our multidisciplinary mission is to create an iconic & profitable real
+        estate portfolio/investment that resonates with{" "}
+        <span className="text-amber-500 font-semibold">
+          Urban Living
+        </span>
+        .
+      </>
+    ),
   },
   {
     icon: Eye,
     title: "Our Vision",
-    description:
-      "To become Africa's most trusted real estate brand by shaping sustainable communities through innovation, integrity, and world-class developments.",
+    description: (
+      <>
+        Building the foundation of{" "}
+        <span className="text-amber-500 font-semibold">
+          Legacy
+        </span>
+        .
+      </>
+    ),
   },
 ];
 
@@ -20,7 +35,9 @@ export default function MissionVision() {
   return (
     <section className="bg-slate-50 py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Heading */}
+
+        {/* ================= HEADING ================= */}
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +60,8 @@ export default function MissionVision() {
           </p>
         </motion.div>
 
-        {/* Cards */}
+        {/* ================= CARDS ================= */}
+
         <div className="grid md:grid-cols-2 gap-8 mt-16">
           {cards.map((card, index) => {
             const Icon = card.icon;
@@ -78,6 +96,7 @@ export default function MissionVision() {
             );
           })}
         </div>
+
       </div>
     </section>
   );

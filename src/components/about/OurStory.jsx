@@ -30,7 +30,7 @@ export default function OurStory() {
 
             <div className="absolute -bottom-8 -right-8 bg-amber-400 rounded-3xl p-8 shadow-xl hidden md:block">
               <h3 className="text-4xl font-bold text-slate-900">
-                15+
+                7+
               </h3>
 
               <p className="text-slate-800 font-medium mt-2">

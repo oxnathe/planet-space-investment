@@ -45,7 +45,7 @@ export default function ComingSoon() {
             transition={{ delay: .2, duration: .6 }}
             className="mb-4 uppercase tracking-[8px] text-brand-gold"
           >
-            PLANET SPACE HEIGHTS
+            THE SIGNATURE DUPLEX
           </motion.p>
 
           <motion.h2

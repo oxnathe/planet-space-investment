@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Linkedin, Instagram } from "lucide-react";
 
+import ceoImage from "../../assets/ceo.jpeg";
 import cooImage from "../../assets/coo.webp";
 import legalImage from "../../assets/legal.jpeg";
 
@@ -8,11 +9,10 @@ const leaders = [
   {
     name: "Emmanuel Gwachie Onwuka",
     position: "Founder / Chief Executive Officer",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1200&auto=format&fit=crop",
+    image: ceoImage,
     imagePosition: "center 15%",
     bio: "Emmanuel leads Planet Space Investment LTD with a passion for building lasting legacies in real estate and delivering long-term value through innovative real estate opportunities.",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/emmanuelonwuka?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     name: "Precious Onyinyechi Ndukwe-Onwuka",
@@ -20,7 +20,7 @@ const leaders = [
     image: cooImage,
     imagePosition: "center 15%",
     bio: "Precious pilots Planet Space Investment LTD's vision in customer experience and sales, overseeing project execution and ensuring every development reflects our commitment to quality and excellence.",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/precious-ndukwe-1569271b3?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
 ];
 
@@ -46,7 +46,8 @@ export default function Leadership() {
     <section className="py-24 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-        {/* Section Heading */}
+        {/* ================= SECTION HEADING ================= */}
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,8 +70,10 @@ export default function Leadership() {
           </p>
         </motion.div>
 
-        {/* Leadership */}
+        {/* ================= LEADERSHIP ================= */}
+
         <div className="grid lg:grid-cols-2 gap-8 mt-16 max-w-5xl mx-auto">
+
           {leaders.map((leader, index) => (
             <motion.div
               key={leader.name}
@@ -94,7 +97,9 @@ export default function Leadership() {
                 duration-500
               "
             >
-              {/* Leader Image */}
+
+              {/* ================= LEADER IMAGE ================= */}
+
               <div
                 className="
                   relative
@@ -107,6 +112,8 @@ export default function Leadership() {
                 <img
                   src={leader.image}
                   alt={leader.name}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     objectPosition: leader.imagePosition,
                   }}
@@ -121,6 +128,7 @@ export default function Leadership() {
                 />
 
                 {/* Bottom Gradient */}
+
                 <div
                   className="
                     absolute
@@ -134,10 +142,13 @@ export default function Leadership() {
                 />
 
                 {/* LinkedIn */}
+
                 <div className="absolute bottom-5 left-5 flex gap-3">
                   <a
                     href={leader.linkedin}
-                    target={leader.linkedin !== "#" ? "_blank" : undefined}
+                    target={
+                      leader.linkedin !== "#" ? "_blank" : undefined
+                    }
                     rel={
                       leader.linkedin !== "#"
                         ? "noopener noreferrer"
@@ -162,8 +173,10 @@ export default function Leadership() {
                 </div>
               </div>
 
-              {/* Leader Information */}
+              {/* ================= LEADER INFORMATION ================= */}
+
               <div className="p-6 sm:p-7">
+
                 <h3
                   className="
                     text-2xl
@@ -195,12 +208,15 @@ export default function Leadership() {
                 >
                   View Profile
                 </button>
+
               </div>
             </motion.div>
           ))}
+
         </div>
 
-        {/* Professional Team Heading */}
+        {/* ================= PROFESSIONAL TEAM HEADING ================= */}
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -223,8 +239,10 @@ export default function Leadership() {
           </p>
         </motion.div>
 
-        {/* Legal & Secretary */}
+        {/* ================= LEGAL & SECRETARY ================= */}
+
         <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}
@@ -249,7 +267,9 @@ export default function Leadership() {
                 duration-300
               "
             >
-              {/* Team Image */}
+
+              {/* ================= TEAM IMAGE ================= */}
+
               <div
                 className="
                   relative
@@ -259,10 +279,13 @@ export default function Leadership() {
                   bg-slate-100
                 "
               >
+
                 {member.image ? (
                   <img
                     src={member.image}
                     alt={member.name}
+                    loading="lazy"
+                    decoding="async"
                     style={{
                       objectPosition: member.imagePosition,
                     }}
@@ -311,10 +334,13 @@ export default function Leadership() {
                     </div>
                   </div>
                 )}
+
               </div>
 
-              {/* Team Information */}
+              {/* ================= TEAM INFORMATION ================= */}
+
               <div className="px-5 py-5">
+
                 <h4
                   className="
                     text-xl
@@ -338,11 +364,15 @@ export default function Leadership() {
                 </p>
 
                 {/* Instagram */}
+
                 <div className="mt-4">
+
                   <a
                     href={member.instagram}
                     target={
-                      member.instagram !== "#" ? "_blank" : undefined
+                      member.instagram !== "#"
+                        ? "_blank"
+                        : undefined
                     }
                     rel={
                       member.instagram !== "#"
@@ -367,10 +397,14 @@ export default function Leadership() {
                   >
                     <Instagram size={17} />
                   </a>
+
                 </div>
+
               </div>
+
             </motion.div>
           ))}
+
         </div>
 
       </div>

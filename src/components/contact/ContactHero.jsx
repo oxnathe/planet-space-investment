@@ -37,7 +37,7 @@ export default function ContactHero() {
 
           {/* Main Heading */}
           <h1 className="font-display text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
-            Let's Start a
+            Let&apos;s Start a
             <br />
             <span className="text-brand-gold">
               Conversation.
@@ -46,7 +46,7 @@ export default function ContactHero() {
 
           {/* Description */}
           <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-            Whether you're searching for your dream home, exploring investment
+            Whether you&apos;re searching for your dream home, exploring investment
             opportunities, or have questions about our developments, our team
             is ready to guide you every step of the way.
           </p>

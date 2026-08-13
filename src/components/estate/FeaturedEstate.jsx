@@ -37,14 +37,14 @@ export default function FeaturedEstate() {
 
             <p className="text-gray-600 leading-8 mb-6">
               The Signature duplex is a beautifully designed 5-bedroom duplex currently under construction, thoughtfully planned for modern family living.
-              Featuring spacious rooms, elegant architecture, and quality finishes, this property is taking shape to offer 
+              Featuring spacious rooms, elegant architecture, and quality finishes, this property is taking shape to offer
               comfort, privacy, and style.
             </p>
 
             <p className="text-gray-600 leading-8 mb-10">
-              Whether you're buying your first plot, building your dream home,
+              Whether you&apos;re buying your first plot, building your dream home,
               or investing for the future, Planet Gardens provides lasting
-              value in one of Nigeria's fastest-growing locations.
+              value in one of Nigeria&apos;s fastest-growing locations.
             </p>
 
           </div>

@@ -14,7 +14,7 @@ export default function ContactCards() {
       icon: Mail,
       title: "Email Us",
       main: "info@planetspaceinvestment.ng",
-      description: "We'll respond as soon as possible",
+      description: "We\u2019ll respond as soon as possible",
       type: "email",
     },
     {
@@ -51,7 +51,7 @@ export default function ContactCards() {
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold text-[#0B1F35]">
-            We're Here To Help
+            We&apos;re Here To Help
           </h2>
 
           <p className="mt-6 text-lg text-slate-600 leading-8">

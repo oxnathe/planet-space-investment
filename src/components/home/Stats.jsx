@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 
 const stats = [
   {
-    value: "10+",
+    value: "3+",
     label: "Estates",
   },
   {
-    value: "500+",
+    value: "40+",
     label: "Properties",
   },
   {

@@ -41,7 +41,7 @@ export default function AboutHero() {
           </h1>
 
           <p className="mt-8 text-lg md:text-xl text-slate-300 leading-8 max-w-2xl">
-            Planet Space is committed to developing premium residential
+            Planet Space Investment is committed to developing premium residential
             communities and investment opportunities that combine thoughtful
             planning, modern infrastructure, and long-term value.
           </p>

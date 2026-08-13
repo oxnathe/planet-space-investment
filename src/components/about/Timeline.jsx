@@ -9,38 +9,38 @@ import {
 
 const timeline = [
   {
-    year: "2014",
-    title: "Planet Space Founded",
+    year: "2019",
+    title: "Started Operations",
     description:
-      "Our journey began with a vision to redefine real estate through trust, innovation, and exceptional developments.",
+      "Planet Space Investment began operations with a clear ambition to create trusted real estate opportunities, combining strategic investments, thoughtful planning, and a commitment to long-term value.",
     icon: Rocket,
   },
   {
-    year: "2017",
+    year: "2022",
     title: "First Estate Development",
     description:
-      "Successfully launched our first residential community, establishing our reputation for quality and excellence.",
+      "We marked a major milestone with the launch of our first estate development, laying the foundation for a growing portfolio of thoughtfully planned communities.",
     icon: Building2,
   },
   {
-    year: "2020",
-    title: "Regional Expansion",
+    year: "2023",
+    title: "Luxury Community — Geneva Prime",
     description:
-      "Expanded into new strategic locations, creating more opportunities for homeowners and investors.",
+      "We introduced Geneva Prime, our luxury community designed to bring together premium living, strategic location, modern infrastructure, and exceptional investment potential.",
     icon: MapPinned,
   },
   {
-    year: "2023",
-    title: "Luxury Communities",
+    year: "2024",
+    title: "Became Incorporated",
     description:
-      "Introduced premium residential estates with modern infrastructure and world-class amenities.",
+      "Planet Space Investment reached a new stage of growth by becoming incorporated, strengthening our corporate foundation and positioning the company for sustainable expansion and greater opportunities.",
     icon: Landmark,
   },
   {
     year: "2026",
     title: "Growing the Future",
     description:
-      "Continuing to shape vibrant communities while delivering lasting value across every development.",
+      "We continue to shape the future of modern living through the development of our Luxe Apartments and Signature Duplexes, creating distinctive spaces designed for contemporary lifestyles, lasting value, and legacy.",
     icon: Trophy,
   },
 ];
@@ -67,8 +67,9 @@ export default function Timeline() {
           </h2>
 
           <p className="mt-6 text-lg text-slate-600 leading-8">
-            Every milestone represents our commitment to excellence,
-            innovation, and building communities that stand the test of time.
+            From our beginnings to the developments shaping tomorrow, every
+            milestone reflects our commitment to excellence, innovation, and
+            creating lasting value.
           </p>
         </motion.div>
 

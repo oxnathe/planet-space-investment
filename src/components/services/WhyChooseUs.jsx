@@ -60,7 +60,7 @@ export default function WhyChooseUs() {
             {/* Floating Card */}
             <div className="absolute bottom-8 left-8 bg-white rounded-3xl shadow-xl px-8 py-6">
               <h3 className="text-5xl font-bold text-[#C89B3C]">
-                10+
+                7+
               </h3>
 
               <p className="text-[#0D1B2A] font-semibold mt-2">

@@ -11,19 +11,19 @@ import {
 const stats = [
   {
     icon: Building2,
-    value: 15,
+    value: 7,
     suffix: "+",
     label: "Years Experience",
   },
   {
     icon: Users,
-    value: 2500,
+    value: 40,
     suffix: "+",
     label: "Happy Clients",
   },
   {
     icon: MapPinned,
-    value: 12,
+    value: 3,
     suffix: "",
     label: "Communities Developed",
   },

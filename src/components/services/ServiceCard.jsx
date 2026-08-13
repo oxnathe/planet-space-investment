@@ -15,7 +15,6 @@ export default function ServiceCard({
       <div className="h-2 bg-[#C89B3C] w-0 group-hover:w-full transition-all duration-500" />
 
       <div className="p-8">
-
         {/* Icon */}
         <div className="w-16 h-16 rounded-2xl bg-[#0D1B2A] flex items-center justify-center mb-6 group-hover:bg-[#C89B3C] transition-all duration-500">
           <Icon
@@ -33,7 +32,6 @@ export default function ServiceCard({
         <p className="text-gray-600 leading-8">
           {description}
         </p>
-
       </div>
     </motion.div>
   );
