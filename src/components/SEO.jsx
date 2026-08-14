@@ -7,8 +7,17 @@ export default function SEO({
 }) {
   const siteName = "Planet Space Investment";
   const baseUrl = "https://planet-space-investment.vercel.app";
-  const canonicalUrl = `${baseUrl}${path}`;
-  const logoUrl = `${baseUrl}/images/logo.png`;
+
+  const canonicalUrl =
+    path === "/"
+      ? baseUrl
+      : `${baseUrl}${path}`;
+
+  const socialImageUrl =
+    `${baseUrl}/images/social-preview.png`;
+
+  const logoUrl =
+    `${baseUrl}/images/logo.png`;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -16,7 +25,7 @@ export default function SEO({
     name: siteName,
     url: baseUrl,
     logo: logoUrl,
-    image: logoUrl,
+    image: socialImageUrl,
     description:
       "Planet Space Investment provides real estate investment, property development, and residential property solutions in Lagos, Nigeria.",
     areaServed: {
@@ -33,22 +42,38 @@ export default function SEO({
 
   return (
     <Helmet>
-      {/* Page Title */}
+      {/* ================= PAGE TITLE ================= */}
+
       <title>{title}</title>
 
-      {/* Meta Description */}
+      {/* ================= META DESCRIPTION ================= */}
+
       <meta
         name="description"
         content={description}
       />
 
-      {/* Canonical URL */}
+      {/* ================= ROBOTS ================= */}
+
+      <meta
+        name="robots"
+        content="index, follow"
+      />
+
+      {/* ================= CANONICAL ================= */}
+
       <link
         rel="canonical"
         href={canonicalUrl}
       />
 
-      {/* Open Graph */}
+      {/* ================= OPEN GRAPH ================= */}
+
+      <meta
+        property="og:type"
+        content="website"
+      />
+
       <meta
         property="og:title"
         content={title}
@@ -57,11 +82,6 @@ export default function SEO({
       <meta
         property="og:description"
         content={description}
-      />
-
-      <meta
-        property="og:type"
-        content="website"
       />
 
       <meta
@@ -75,16 +95,42 @@ export default function SEO({
       />
 
       <meta
+        property="og:locale"
+        content="en_NG"
+      />
+
+      <meta
         property="og:image"
-        content={logoUrl}
+        content={socialImageUrl}
+      />
+
+      <meta
+        property="og:image:secure_url"
+        content={socialImageUrl}
+      />
+
+      <meta
+        property="og:image:type"
+        content="image/png"
+      />
+
+      <meta
+        property="og:image:width"
+        content="1200"
+      />
+
+      <meta
+        property="og:image:height"
+        content="630"
       />
 
       <meta
         property="og:image:alt"
-        content={siteName}
+        content="Planet Space Investment - Premium Real Estate and Investment Opportunities in Nigeria"
       />
 
-      {/* Twitter / X */}
+      {/* ================= TWITTER / X ================= */}
+
       <meta
         name="twitter:card"
         content="summary_large_image"
@@ -102,10 +148,16 @@ export default function SEO({
 
       <meta
         name="twitter:image"
-        content={logoUrl}
+        content={socialImageUrl}
       />
 
-      {/* Structured Data / JSON-LD */}
+      <meta
+        name="twitter:image:alt"
+        content="Planet Space Investment - Premium Real Estate and Investment Opportunities in Nigeria"
+      />
+
+      {/* ================= STRUCTURED DATA ================= */}
+
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
       </script>
