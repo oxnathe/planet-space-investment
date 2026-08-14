@@ -11,6 +11,7 @@ export default function Hero() {
       ========================================================= */}
       <motion.img
         src={heroImage}
+        fetchPriority="high"
         alt="Planet Space Investment"
         className="absolute inset-0 h-full w-full object-cover object-center"
         initial={{ scale: 1.12 }}
