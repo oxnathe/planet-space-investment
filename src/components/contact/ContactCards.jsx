@@ -28,7 +28,7 @@ export default function ContactCards() {
     {
       icon: Clock,
       title: "Business Hours",
-      main: "Tuesday – Friday",
+      main: "Monday – Friday",
       description: "8:30 AM – 6:00 PM",
       type: "hours",
     },
