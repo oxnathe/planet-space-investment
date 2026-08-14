@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
-import { Linkedin, Instagram } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 import ceoImage from "../../assets/ceo.jpeg";
 import cooImage from "../../assets/coo.webp";
 import legalImage from "../../assets/legal.jpeg";
+import sctImage from "../../assets/sct.jpeg";
+import wilxImage from "../../assets/wilx.jpeg";
 
 const leaders = [
   {
@@ -12,7 +14,8 @@ const leaders = [
     image: ceoImage,
     imagePosition: "center 15%",
     bio: "Emmanuel leads Planet Space Investment LTD with a passion for building lasting legacies in real estate and delivering long-term value through innovative real estate opportunities.",
-    linkedin: "https://www.linkedin.com/in/emmanuelonwuka?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    linkedin:
+      "https://www.linkedin.com/in/emmanuelonwuka?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     name: "Precious Onyinyechi Ndukwe-Onwuka",
@@ -20,7 +23,8 @@ const leaders = [
     image: cooImage,
     imagePosition: "center 15%",
     bio: "Precious pilots Planet Space Investment LTD's vision in customer experience and sales, overseeing project execution and ensuring every development reflects our commitment to quality and excellence.",
-    linkedin: "https://www.linkedin.com/in/precious-ndukwe-1569271b3?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    linkedin:
+      "https://www.linkedin.com/in/precious-ndukwe-1569271b3?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
 ];
 
@@ -30,14 +34,18 @@ const teamMembers = [
     position: "Legal & Compliance",
     image: legalImage,
     imagePosition: "center 15%",
-    instagram: "#",
   },
   {
-    name: "Company Secretary",
+    name: "Tennate Blessing",
     position: "Company Secretary",
-    image: null,
+    image: sctImage,
     imagePosition: "center 15%",
-    instagram: "#",
+  },
+  {
+    name: "Wilson Utieyin",
+    position: "Software Engineer",
+    image: wilxImage,
+    imagePosition: "center 15%",
   },
 ];
 
@@ -146,14 +154,8 @@ export default function Leadership() {
                 <div className="absolute bottom-5 left-5 flex gap-3">
                   <a
                     href={leader.linkedin}
-                    target={
-                      leader.linkedin !== "#" ? "_blank" : undefined
-                    }
-                    rel={
-                      leader.linkedin !== "#"
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={`LinkedIn - ${leader.name}`}
                     className="
                       w-10
@@ -239,9 +241,9 @@ export default function Leadership() {
           </p>
         </motion.div>
 
-        {/* ================= LEGAL & SECRETARY ================= */}
+        {/* ================= PROFESSIONAL TEAM ================= */}
 
-        <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
 
           {teamMembers.map((member, index) => (
             <motion.div
@@ -362,43 +364,6 @@ export default function Leadership() {
                 >
                   {member.position}
                 </p>
-
-                {/* Instagram */}
-
-                <div className="mt-4">
-
-                  <a
-                    href={member.instagram}
-                    target={
-                      member.instagram !== "#"
-                        ? "_blank"
-                        : undefined
-                    }
-                    rel={
-                      member.instagram !== "#"
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
-                    aria-label={`Instagram - ${member.name}`}
-                    className="
-                      w-9
-                      h-9
-                      rounded-full
-                      bg-slate-100
-                      flex
-                      items-center
-                      justify-center
-                      text-slate-800
-                      hover:bg-amber-400
-                      hover:text-slate-900
-                      transition
-                      duration-300
-                    "
-                  >
-                    <Instagram size={17} />
-                  </a>
-
-                </div>
 
               </div>
 

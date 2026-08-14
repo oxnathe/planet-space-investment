@@ -71,7 +71,7 @@ export default function ContactForm() {
             <h2 className="text-4xl font-bold text-slate-900">
               {isWaitingList
                 ? "Join Our Waiting List"
-                : "We&apos;d Love To Hear From You"}
+                : "We'd Love To Hear From You"}
             </h2>
 
             <p className="mt-5 text-slate-600 leading-8">
