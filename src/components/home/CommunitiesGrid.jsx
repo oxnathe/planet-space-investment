@@ -13,7 +13,7 @@ const communities = [
     name: "Geneva Prime",
     location: "Ketu-Epe, Lagos",
     tag: "Selling Fast",
-    image: "/images/community-2.jpeg",
+    image: "/images/community-2.webp",
   },
   {
     name: "The Luxe Apartment",
