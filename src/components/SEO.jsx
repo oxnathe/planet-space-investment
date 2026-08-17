@@ -6,11 +6,13 @@ export default function SEO({
   path = "/",
 }) {
   const siteName = "Planet Space Investment";
-  const baseUrl = "https://planet-space-investment.vercel.app";
+
+  // LIVE WEBSITE DOMAIN
+  const baseUrl = "https://planetspaceinvestment.ng";
 
   const canonicalUrl =
     path === "/"
-      ? baseUrl
+      ? `${baseUrl}/`
       : `${baseUrl}${path}`;
 
   const socialImageUrl =

@@ -61,7 +61,7 @@ export default function WhyChoose() {
           className="text-center max-w-3xl mx-auto"
         >
           <p className="uppercase tracking-[0.3em] text-amber-500 text-sm font-semibold mb-4">
-            Why Planet Space
+            Why Planet Space Investment
           </p>
 
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">

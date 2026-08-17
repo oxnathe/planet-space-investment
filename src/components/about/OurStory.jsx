@@ -68,7 +68,7 @@ export default function OurStory() {
             {/* Paragraph 1 */}
 
             <p className="text-slate-600 text-lg leading-8 mb-6">
-              Planet Space was founded with a clear vision to redefine real
+              Planet Space Investment LTD was founded with a clear vision to redefine real
               estate through carefully planned communities that combine
               quality, innovation, and long-term value.
             </p>
@@ -84,7 +84,7 @@ export default function OurStory() {
             {/* Paragraph 3 */}
 
             <p className="text-slate-600 text-lg leading-8">
-              Today, Planet Space continues to build trusted developments that
+              Today, Planet Space Investment continues to build trusted developments that
               create opportunities for homeowners and investors while shaping
               vibrant communities for generations to come.
             </p>
